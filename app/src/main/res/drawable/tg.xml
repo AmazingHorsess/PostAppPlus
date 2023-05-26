@@ -12,21 +12,7 @@
       android:fillColor="#ffffff"/>
   <path
       android:pathData="M163.5,161.5m-44.5,0a44.5,44.5 0,1 1,89 0a44.5,44.5 0,1 1,-89 0">
-    <aapt:attr name="android:fillColor">
-      <gradient 
-          android:centerX="166"
-          android:centerY="160.5"
-          android:gradientRadius="48.02"
-          android:type="radial">
-        <item android:offset="0.29" android:color="#FF915FFF"/>
-        <item android:offset="0.51" android:color="#FF00C8FF"/>
-        <item android:offset="0.75" android:color="#FFC757BC"/>
-        <item android:offset="1" android:color="#FFF88909"/>
-      </gradient>
-    </aapt:attr>
+
   </path>
-  <path
-      android:pathData="M163.5,140C161.01,140 159,142.01 159,144.5V157H146.5C144.01,157 142,159.01 142,161.5C142,163.99 144.01,166 146.5,166H159V178.5C159,180.99 161.01,183 163.5,183C165.99,183 168,180.99 168,178.5V166H180.5C182.99,166 185,163.99 185,161.5C185,159.01 182.99,157 180.5,157H168V144.5C168,142.01 165.99,140 163.5,140Z"
-      android:fillColor="#ffffff"
-      android:fillType="evenOdd"/>
+
 </vector>

@@ -16,7 +16,10 @@ import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.postappplus.ui.theme.PostAppPlusTheme
 import com.postappplus.ui.theme.appBarDark
 import com.postappplus.ui.theme.appBarLight
+import com.postappplus.util.Navigation
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,25 +37,11 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    Navigation()
+
                 }
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    PostAppPlusTheme {
-        Greeting("Android")
-    }
-}
