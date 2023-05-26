@@ -17,9 +17,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.semantics.semantics
-import androidx.compose.ui.semantics.testTag
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
@@ -33,7 +30,7 @@ fun BaseTextField(
     text: String,
     hint: String = "",
     maxLength: Int = 40,
-    error: String = "",
+    error: Boolean = false,
     singleLine: Boolean = true,
     maxLines: Int = 1,
     leadingIcon: ImageVector? = null,
@@ -62,7 +59,7 @@ fun BaseTextField(
                     style = MaterialTheme.typography.bodySmall
                 )
             },
-            isError = error != "",
+            isError = error,
             keyboardOptions = KeyboardOptions(
                 keyboardType = keyboardType
             ),
@@ -113,15 +110,6 @@ fun BaseTextField(
                 .fillMaxWidth()
 
         )
-        if (error.isNotEmpty()) {
-            Text(
-                text = error,
-                style = MaterialTheme.typography.bodyMedium,
-                color = Color.Red,
-                textAlign = TextAlign.End,
-                modifier = Modifier
-                    .fillMaxWidth()
-            )
-        }
+
     }
 }

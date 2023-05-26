@@ -33,6 +33,14 @@ val Typography = Typography(
         letterSpacing = 0.sp
 
     ),
+    titleSmall = TextStyle(
+        fontFamily = openSans,
+        fontWeight = FontWeight.Bold,
+        fontSize = 20.sp,
+        lineHeight = 32.sp,
+        letterSpacing = 0.sp
+
+    ),
     titleLarge  = TextStyle(
         fontFamily = openSans,
         fontWeight = FontWeight.ExtraBold,
